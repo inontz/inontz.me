@@ -30,7 +30,6 @@ export default function NavBar({ session }: { session: Session | null }) {
               height="50"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>iNontz</p>
           </Link>
           <div>
             {session ? (

@@ -7,7 +7,7 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "iNontz - Welcome to my personal playground.",
+  title: "iNontz",
   description:
     "Just playground",
   twitter: {
