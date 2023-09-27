@@ -35,6 +35,14 @@ export default function LineLiff() {
                 if (liff.isLoggedIn()) {
                     setStatus("Initialized")
                 }
+                liff
+                .getProfile()
+                .then((profile: any) => {
+                    setDisplayName(profile.displayName)
+        })
+        .catch((err: any) => {
+            console.error({ err })
+        })
             })
             .catch((error: Error) => {
                 console.log("LIFF init failed.");
