@@ -6,8 +6,10 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
+import LineLiff from "@/components/home/line-liff";
 
 export default async function Home() {
+
   const { stargazers_count: stars } = await fetch(
     "https://api.github.com/repos/inontz/inontz.me",
     {
@@ -23,6 +25,7 @@ export default async function Home() {
   )
     .then((res) => res.json())
     .catch((e) => console.log(e));
+  
 
   return (
     <>
@@ -39,9 +42,8 @@ export default async function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github />
             <p>
-              iNontz on Github
+              <LineLiff />
             </p>
           </a>
         </div>
@@ -54,7 +56,7 @@ export default async function Home() {
         </h1>
         
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+      {/* <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -70,7 +72,7 @@ export default async function Home() {
             large={large}
           />
         ))}
-      </div>
+      </div> */}
     </>
   );
 }
